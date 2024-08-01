@@ -4113,7 +4113,7 @@
     }
     function initSliders() {
         if (document.querySelector(".card-slider-thumbs")) {
-            new swiper_core_Swiper(".card-slider-thumbs", {
+            const thumbsSwiper = new swiper_core_Swiper(".card-slider-thumbs", {
                 modules: [ Navigation, Mousewheel, freeMode, Thumb ],
                 observer: true,
                 observeParents: true,
@@ -4121,35 +4121,31 @@
                 spaceBetween: 9,
                 autoHeight: true,
                 speed: 800,
+                freeMode: true,
+                direction: "vertical",
                 mousewheel: {
                     sensitivity: 1
                 },
                 navigation: {
                     prevEl: ".swiper-button-prev",
                     nextEl: ".swiper-button-next"
-                },
-                breakpoints: {
-                    768: {
-                        direction: "vertical",
-                        slidesPerView: 5
-                    },
-                    320: {
-                        direction: "horizontal",
-                        slidesPerView: 4
-                    }
                 }
             });
             const mainSwiper = new swiper_core_Swiper(".card-slider", {
                 modules: [ Mousewheel, freeMode, Thumb ],
                 observer: true,
                 observeParents: true,
-                slidesPerView: 1,
+                slidesPerView: 4,
                 spaceBetween: 12,
                 autoHeight: true,
                 speed: 800,
+                freeMode: true,
                 direction: "vertical",
                 mousewheel: {
                     sensitivity: 1
+                },
+                thumbs: {
+                    swiper: thumbsSwiper
                 }
             });
             document.querySelectorAll(".card-slider-thumbs .swiper-slide").forEach(((thumb, index) => {
@@ -8051,6 +8047,11 @@
             }, window.CI360.notInitOnLoad || _e();
         })();
     })();
+    document.addEventListener("DOMContentLoaded", (function() {
+        if (typeof Fancybox !== "undefined") Fancybox.bind('[data-fancybox="gallery"]', {
+            Thumbs: false
+        });
+    }));
     document.addEventListener("DOMContentLoaded", (function() {
         const closeButton = document.querySelector(".bottom-main__close");
         if (closeButton) closeButton.addEventListener("click", (function() {
