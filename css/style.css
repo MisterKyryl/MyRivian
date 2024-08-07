@@ -4757,10 +4757,6 @@ body::after {
 }
 
 @media (min-width: 61.99875em) {
-  .swiper {
-    height: 100%;
-  }
-
   .swiper-button-prev,
   .swiper-button-next {
     cursor: pointer;
