@@ -5,11 +5,9 @@
 	<title>Main</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
-	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css?_v=20240805211711" />
-	<link rel="stylesheet" href="css/style.min.css?_v=20240805211711">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css?_v=20240807232648" />
+	<link rel="stylesheet" href="css/style.min.css?_v=20240807232648">
 	<link rel="shortcut icon" href="favicon.ico">
-	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
@@ -35,28 +33,28 @@
 			</div>
 		</header>
 		<main class="page">
-			<div class="page__main main">
+			<div data-watch data-watch-once data-watch-threshold=".8" class="page__main main">
 				<div class="main__container">
-					<div data-watch data-watch-once data-da=".header-main__block,767.98,1" class="main__text">
+					<div data-da=".header-main__block,767.98,1" class="main__text">
 						Зроблено в США
 					</div>
 					<div class="main__header header-main">
 						<div class="header-main__block">
-							<div data-watch data-watch-once class="header-main__label">
+							<div class="header-main__label">
 								<img src="img/icons/logo-page.svg" alt="Image">
 							</div>
-							<div data-watch data-watch-once class="header-main__name">
+							<div class="header-main__name">
 								<div class="header-main__text">
 									RIVIAN R1T<span>RIVIAN R1S</span>
 								</div>
 							</div>
-							<div data-watch data-watch-once class="header-main__made">
+							<div class="header-main__made">
 								<div class="header-main__text">
 									MADE IN USA RIVIAN R1T
 									<span>MADE IN USA RIVIAN R1S</span>
 								</div>
 							</div>
-							<div data-watch data-watch-once class="header-main__price">
+							<div class="header-main__price">
 								від 70 000$
 							</div>
 						</div>
@@ -70,7 +68,7 @@
 				<div class="main__container">
 					<div class="main__bottom bottom-main">
 						<div class="bottom-main__body body-bottom-main">
-							<div data-watch data-watch-once class="body-bottom-main__item">
+							<div class="body-bottom-main__item">
 								<p class="body-bottom-main__text">
 									<b>Продаж готових авто</b> з наявних,
 								</p>
@@ -88,7 +86,7 @@
 								</button>
 							</div>
 						</div>
-						<div data-watch data-watch-once class="bottom-main__block">
+						<div class="bottom-main__block">
 							<div class="bottom-main__actions actions-bottom-main">
 								<button data-da=".top-footer__action,767.98, 1" type="button" class="actions-bottom-main__button button button_yellow"><span>придбати</span></button>
 							</div>
@@ -97,7 +95,7 @@
 				</div>
 				<div class="custom-cursor" id="customCursor">затисни <br> й тягни</div>
 			</div>
-			<section class="page__rent rent">
+			<section data-watch data-watch-once data-watch-threshold=".8" class="page__rent rent">
 				<div class="rent__container">
 					<div class="rent__header header-rent">
 						<h1 class="header-rent__title">
@@ -109,7 +107,7 @@
 						</p>
 					</div>
 					<div class="rent__body body-rent">
-						<div data-watch data-watch-once class="body-rent__item item-rent">
+						<div class="body-rent__item item-rent">
 							<div class="item-rent__header">
 								<div class="item-rent__info">
 									Застава $2500
@@ -124,7 +122,7 @@
 								</div>
 							</div>
 						</div>
-						<article data-watch data-watch-once class="body-rent__article article-rent">
+						<article class="body-rent__article article-rent">
 							<h4 class="article-rent__title">
 								Замість стриманого тест-драйву
 							</h4>
@@ -143,28 +141,28 @@
 					</div>
 				</div>
 			</section>
-			<div class="page__review review">
+			<div data-watch data-watch-once data-watch-margin="-350px" class="page__review review">
 				<div class="review__container">
 					<div class="review__body">
 						<h2 class="review__title">
 							Стань власником <br> ексклюзивного My Rivian
 						</h2>
-						<a data-watch data-watch-once href="https://youtu.be/Rte9dMhJHE4?si=dk3ebu3BuO04TCID" class="review__item" target="_blank">
-							<div class="review__image">
-								<picture><source srcset="img/main//review/01.webp" type="image/webp"><img src="img/main//review/01.jpg" alt="Image"></picture>
+						<div class="review__item">
+							<div class="review__video">
+								<div id="ytplayer"></div>
 							</div>
-							<div class="review__link button button_yellow"><span>Відео</span></div>
-						</a>
+							<button id="hideButton" type="button" class="review__link button button_yellow"><span>Відео</span></button>
+						</div>
 					</div>
 				</div>
 			</div>
-			<div class="page__service service">
+			<div data-watch data-watch-once data-watch-margin="-350px" class="page__service service">
 				<div class="service__container">
 					<h2 class="service__title">
 						Сервіс та ремонт My Rivian в Украине
 					</h2>
 					<div class="service__body">
-						<div data-watch data-watch-once class="service__phone phone-service">
+						<div class="service__phone phone-service">
 							<a href="tel:380954556671" class="phone-service__block">
 								<div class="phone-service__text">
 									Просто <br> зателефонуйте <br> нам
@@ -180,7 +178,7 @@
 								</span>
 							</a>
 						</div>
-						<div data-watch data-watch-once class="service__items items-service">
+						<div class="service__items items-service">
 							<div class="items-service__block items-service__block_1">
 								<div class="items-service__text">
 									Довірте ваш Rivian тим, <br> хто дійсно знає, як <br> про нього дбати!
@@ -201,13 +199,13 @@
 					</div>
 				</div>
 			</div>
-			<div class="page__why why">
+			<div data-watch data-watch-once data-watch-threshold=".8" class="page__why why">
 				<div class="why__container">
 					<h2 class="why__title">
 						Чому Rivian?
 					</h2>
 					<div class="why__body body-why">
-						<div data-watch data-watch-once class="body-why__item body-why__item_1">
+						<div class="body-why__item body-why__item_1">
 							<div class="body-why__label">
 								Rivian — американські електромобілі нового покоління з унікальними технічними особливостями.
 							</div>
@@ -225,7 +223,7 @@
 								</p>
 							</div>
 						</div>
-						<div data-watch data-watch-once data-da=".why-sub__body, 767.98,1" class="body-why__item body-why__item_2">
+						<div data-da=".why-sub__body, 767.98,1" class="body-why__item body-why__item_2">
 							<div class="body-why__text">
 								<p>
 									Електромобіль зі США, який змінить ваше уявлення про водіння
@@ -255,19 +253,19 @@
 					</div>
 				</div>
 			</div>
-			<div class="page__why why-sub">
+			<div data-watch data-watch-once data-watch-threshold=".8" class="page__why why-sub">
 				<div class="why-sub__container">
 					<div class="why-sub__body body-sub-why">
 
 					</div>
 				</div>
 			</div>
-			<section class="page__label label">
+			<section data-watch data-watch-once data-watch-threshold=".8" class="page__label label">
 				<div class="label__container">
 					<div class="label__image">
 						<img src="img/icons/logo.svg" alt="Image">
 					</div>
-					<div data-watch data-watch-once class="label__body body-label">
+					<div class="label__body body-label">
 						<div class="body-label__item">
 							<h2 class="body-label__title">
 								My Rivian — найбільша в Україні платформа з продажу та обслуговування Rivian
@@ -312,8 +310,8 @@
 					</div>
 				</div>
 			</section>
-			<div id="product-01" class="page__product product product-01">
-				<div data-watch data-watch-once class="product__container">
+			<div data-watch data-watch-once data-watch-margin="-350px" id="product-01" class="page__product product product-01">
+				<div class="product__container">
 					<h2 class="product__title">
 						R1T
 					</h2>
@@ -517,14 +515,13 @@
 							</div>
 						</div>
 					</div>
-					<button data-watch data-watch-once type="button" class="product__buy button button_yellow"><span>придбати</span></button>
-					<div data-watch data-watch-once class="product__action action-product">
+					<div class="product__action action-product">
 						<button type="submit" class="action-product__button button button_green"><span>показати більше моделей</span></button>
 					</div>
 				</div>
 			</div>
-			<div id="product-02" class="page__product product product-02">
-				<div data-watch data-watch-once class="product__container">
+			<div data-watch data-watch-once data-watch-margin="-350px" id="product-02" class="page__product product product-02">
+				<div class="product__container">
 					<h2 class="product__title">
 						R1S
 					</h2>
@@ -728,14 +725,13 @@
 							</div>
 						</div>
 					</div>
-					<button data-watch data-watch-once type="button" class="product__buy button button_yellow"><span>придбати</span></button>
-					<div data-watch data-watch-once class="product__action action-product">
+					<div class="product__action action-product">
 						<button type="submit" class="action-product__button button button_green"><span>показати більше моделей</span></button>
 					</div>
 				</div>
 			</div>
-			<div class="page__product product product-gray">
-				<div data-watch data-watch-once class="product__container">
+			<div data-watch data-watch-once data-watch-margin="-350px" class="page__product product product-gray">
+				<div class="product__container">
 					<h2 class="product__title">
 						Транзит
 					</h2>
@@ -939,13 +935,14 @@
 							</div>
 						</div>
 					</div>
-					<button data-watch data-watch-once type="button" class="product__buy button button_yellow"><span>придбати</span></button>
-					<div data-watch data-watch-once class="product__action action-product">
+					<div class="product__action action-product">
 						<button type="submit" class="action-product__button button button_green"><span>показати більше моделей</span></button>
 					</div>
 				</div>
 			</div>
-			<button id="scroll-up" type="button" class="scroll-up"></button>
+			<button id="scroll-up" type="button" class="scroll-up">
+				<span></span>
+			</button>
 		</main>
 		<footer class="footer">
 			<div class="footer__top top-footer _active-fixed-footer">
@@ -973,14 +970,15 @@
 						<button type="submit" class="form-top-footer__button button button_yellow"><span>отримати пропозицію</span></button>
 					</form>
 					<div class="top-footer__action action-top-footer">
-						<button data-da=".actions-bottom-main,767.98, 2" type="button" class="action-top-footer__catalog button"><span>
+						<button data-da=".actions-bottom-main,767.98, 2" type="button" class="action-top-footer__catalog button">
+							<span>
 								<img src="img/icons/catalog.svg" alt="Image">
 							</span>Каталог машин</button>
 						<button data-da=".actions-bottom-main,1100, 1" type="button" class="action-top-footer__button button button_green"><span>орендувати</span></button>
 					</div>
 				</div>
 			</div>
-			<div class="footer__contact contact-footer">
+			<div data-watch data-watch-once data-watch-margin="-350px" class="footer__contact contact-footer">
 				<div class="contact-footer__container">
 					<div class="contact-footer__block">
 						<div class="contact-footer__header">
@@ -989,7 +987,7 @@
 							</h3>
 						</div>
 						<div class="contact-footer__body body-contact-footer">
-							<div data-watch data-watch-once class="body-contact-footer__content content-contact-footer">
+							<div class="body-contact-footer__content content-contact-footer">
 								<div class="content-contact-footer__item">
 									<div class="content-contact-footer__text">
 										<span>My Rivian</span> — компанія, яка супроводжує вас на всьому шляху взаємодії з елекромобілями Rivian.
@@ -1007,7 +1005,7 @@
 									</div>
 								</div>
 							</div>
-							<div data-watch data-watch-once class="body-contact-footer__consultation consultation-contact-footer">
+							<div class="body-contact-footer__consultation consultation-contact-footer">
 								<div data-da=".contact-footer__header, 767,98, 1" class="consultation-contact-footer__label">
 									<img src="img/icons/logo-footer.svg" alt="Image">
 								</div>
@@ -1124,7 +1122,7 @@
 			</div>
 		</div>
 	</div>
-	<script src="js/app.min.js?_v=20240805211711"></script>
+	<script src="js/app.min.js?_v=20240807232648"></script>
 </body>
 
 </html>
