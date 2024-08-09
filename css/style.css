@@ -1207,7 +1207,7 @@ body::after {
 }
 
 ._product .header__container {
-  max-width: none;
+  max-width: 158.125rem;
 }
 
 .header__text {
@@ -4227,7 +4227,7 @@ body::after {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  max-width: none;
+  max-width: 160rem;
 }
 
 .card__content {
@@ -4278,7 +4278,9 @@ body::after {
 }
 
 .content-card__item {
-  display: none;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -4287,6 +4289,10 @@ body::after {
       -ms-flex-align: center;
           align-items: center;
   margin-top: 0.875rem;
+}
+
+.content-card__item._item {
+  display: none;
 }
 
 .info-card__header {
@@ -4814,14 +4820,26 @@ body::after {
     display: none;
   }
 
-@supports (height: clamp( 90.75rem , -37.5204081633rem  +  206.887755102vw , 293.5rem )) {
+@supports (height: clamp( 73.5rem , -52.3979591837rem  +  203.0612244898vw , 272.5rem )) {
     .card-slider {
+      height: clamp( 73.5rem , -52.3979591837rem  +  203.0612244898vw , 272.5rem );
+    }
+}
+
+@supports not (height: clamp( 73.5rem , -52.3979591837rem  +  203.0612244898vw , 272.5rem )) {
+    .card-slider {
+      height: calc(73.5rem + 199 * (100vw - 62rem) / 98);
+    }
+}
+
+@supports (height: clamp( 90.75rem , -37.5204081633rem  +  206.887755102vw , 293.5rem )) {
+    .card-slider._slider {
       height: clamp( 90.75rem , -37.5204081633rem  +  206.887755102vw , 293.5rem );
     }
 }
 
 @supports not (height: clamp( 90.75rem , -37.5204081633rem  +  206.887755102vw , 293.5rem )) {
-    .card-slider {
+    .card-slider._slider {
       height: calc(90.75rem + 202.75 * (100vw - 62rem) / 98);
     }
 }
@@ -4839,7 +4857,7 @@ body::after {
   }
 
   ._product .header__logo {
-    margin-left: 0.9375rem;
+    margin-left: 0.8125rem;
   }
 
   .action-top-footer__catalog {
@@ -4915,9 +4933,9 @@ body::after {
 }
 
   .content-card {
-    -webkit-box-flex: 1;
-        -ms-flex: 1 1 2031px;
-            flex: 1 1 2031px;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 2188px;
+            flex: 0 1 2188px;
   }
 
   .content-card__code {
