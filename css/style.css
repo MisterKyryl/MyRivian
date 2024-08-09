@@ -886,6 +886,10 @@ body::after {
   display: -ms-flexbox;
   display: flex;
   position: relative;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .swiper-vertical .swiper-wrapper {
@@ -951,7 +955,7 @@ body::after {
 }
 
 .card-slider-thumbs {
-  height: 25.8125rem;
+  height: 50vh;
 }
 
 .card-slider-thumbs__slide {
@@ -997,7 +1001,6 @@ body::after {
   right: 1.6875rem;
   border-radius: 100%;
   background-color: #f2f2f2;
-  opacity: 0.9;
   -webkit-transition: -webkit-transform 0.4s ease 0s;
   transition: -webkit-transform 0.4s ease 0s;
   transition: transform 0.4s ease 0s;
@@ -1022,6 +1025,17 @@ body::after {
   transition: -webkit-transform 0.4s ease 0s;
   transition: transform 0.4s ease 0s;
   transition: transform 0.4s ease 0s, -webkit-transform 0.4s ease 0s;
+}
+
+.card-slider__item-ibg span {
+  position: absolute;
+  top: 0.75rem;
+  right: 1.6875rem;
+  background-color: #f2f2f2;
+  padding: 0.5rem 1.3125rem;
+  border-radius: 16px;
+  font-size: 1rem;
+  line-height: 1.1875;
 }
 
 [data-fancybox-toggle-fullscreen],
@@ -1406,38 +1420,15 @@ body::after {
   width: 1.75rem;
   height: 1.75rem;
   border-radius: 100%;
-  -webkit-transition: -webkit-transform 0.4s ease 0s;
-  transition: -webkit-transform 0.4s ease 0s;
-  transition: transform 0.4s ease 0s;
-  transition: transform 0.4s ease 0s, -webkit-transform 0.4s ease 0s;
-}
-
-.social-top-footer__viber img,
-.social-top-footer__whatsapp img,
-.social-top-footer__telegram img,
-.social-top-footer__location img {
-  -webkit-transition: -webkit-transform 0.4s ease 0s;
-  transition: -webkit-transform 0.4s ease 0s;
-  transition: transform 0.4s ease 0s;
-  transition: transform 0.4s ease 0s, -webkit-transform 0.4s ease 0s;
+  -webkit-transition: opacity 0.4s ease 0s;
+  transition: opacity 0.4s ease 0s;
 }
 
 .social-top-footer__viber:hover,
 .social-top-footer__whatsapp:hover,
 .social-top-footer__telegram:hover,
 .social-top-footer__location:hover {
-  -webkit-transform: scale(1.1);
-      -ms-transform: scale(1.1);
-          transform: scale(1.1);
-}
-
-.social-top-footer__viber:hover img,
-.social-top-footer__whatsapp:hover img,
-.social-top-footer__telegram:hover img,
-.social-top-footer__location:hover img {
-  -webkit-transform: scale(1.1);
-      -ms-transform: scale(1.1);
-          transform: scale(1.1);
+  opacity: 0.7;
 }
 
 .social-top-footer__viber {
@@ -4287,9 +4278,7 @@ body::after {
 }
 
 .content-card__item {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+  display: none;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -4812,7 +4801,7 @@ body::after {
   }
 
   .swiper-button-next {
-    margin-top: 1.6875rem;
+    margin-top: 0.5625rem;
   }
 
   .swiper-button-next span {
@@ -4825,15 +4814,15 @@ body::after {
     display: none;
   }
 
-@supports (height: clamp( 73.5rem , -52.3979591837rem  +  203.0612244898vw , 272.5rem )) {
+@supports (height: clamp( 90.75rem , -37.5204081633rem  +  206.887755102vw , 293.5rem )) {
     .card-slider {
-      height: clamp( 73.5rem , -52.3979591837rem  +  203.0612244898vw , 272.5rem );
+      height: clamp( 90.75rem , -37.5204081633rem  +  206.887755102vw , 293.5rem );
     }
 }
 
-@supports not (height: clamp( 73.5rem , -52.3979591837rem  +  203.0612244898vw , 272.5rem )) {
+@supports not (height: clamp( 90.75rem , -37.5204081633rem  +  206.887755102vw , 293.5rem )) {
     .card-slider {
-      height: calc(73.5rem + 199 * (100vw - 62rem) / 98);
+      height: calc(90.75rem + 202.75 * (100vw - 62rem) / 98);
     }
 }
 
@@ -4843,9 +4832,9 @@ body::after {
   }
 
   .card-slider__item-ibg {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 1 2031px;
-            flex: 0 1 2031px;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 2030px;
+            flex: 1 1 2030px;
     padding-top: 53.2623169108%;
   }
 
@@ -4926,9 +4915,9 @@ body::after {
 }
 
   .content-card {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 1 2031px;
-            flex: 0 1 2031px;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 2031px;
+            flex: 1 1 2031px;
   }
 
   .content-card__code {
@@ -5661,8 +5650,11 @@ body::after {
     -webkit-transform: scale(0.6);
         -ms-transform: scale(0.6);
             transform: scale(0.6);
-    right: 0.75rem;
     bottom: 0.5rem;
+  }
+
+  .card-slider__item-ibg span {
+    right: 0.5rem;
   }
 
   .phone-top-footer__link span:nth-child(1) {

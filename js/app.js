@@ -4443,6 +4443,7 @@
                 modules: [ Navigation, Mousewheel, freeMode, Thumb ],
                 observer: true,
                 observeParents: true,
+                slidesPerView: "auto",
                 spaceBetween: 9,
                 autoHeight: true,
                 speed: 800,
@@ -4457,11 +4458,9 @@
                 },
                 breakpoints: {
                     320: {
-                        slidesPerView: 1,
                         loop: false
                     },
                     992: {
-                        slidesPerView: 5,
                         loop: true
                     }
                 }
@@ -4512,6 +4511,9 @@
                     }
                 }
             });
+            mainSwiper.on("slideChange", (function() {
+                thumbsSwiper.slideTo(mainSwiper.activeIndex);
+            }));
             document.querySelectorAll(".card-slider-thumbs .swiper-slide").forEach(((thumb, index) => {
                 thumb.addEventListener("click", (() => {
                     mainSwiper.slideTo(index);
