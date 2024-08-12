@@ -4970,12 +4970,6 @@ body::after {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-
-  .info-card__header {
-    -ms-flex-item-align: end;
-        -ms-grid-row-align: end;
-        align-self: end;
-  }
 }
 
 @media (max-width: 75em) {
@@ -5674,8 +5668,8 @@ body::after {
     -webkit-transform: scale(0.6);
         -ms-transform: scale(0.6);
             transform: scale(0.6);
-    right: 1.1875rem;
-    bottom: 1rem;
+    right: 0.9375rem;
+    bottom: 0.9375rem;
   }
 
   .card-slider__item-ibg::after {
@@ -5683,6 +5677,27 @@ body::after {
         -ms-transform: scale(0.6);
             transform: scale(0.6);
     bottom: 0.5rem;
+    right: 0.5rem;
+  }
+
+  .card-slider__item-ibg:hover::before {
+    -webkit-transform: scale(0.7);
+        -ms-transform: scale(0.7);
+            transform: scale(0.7);
+    -webkit-transition: -webkit-transform 0.4s ease 0s;
+    transition: -webkit-transform 0.4s ease 0s;
+    transition: transform 0.4s ease 0s;
+    transition: transform 0.4s ease 0s, -webkit-transform 0.4s ease 0s;
+  }
+
+  .card-slider__item-ibg:hover::after {
+    -webkit-transform: scale(0.7);
+        -ms-transform: scale(0.7);
+            transform: scale(0.7);
+    -webkit-transition: -webkit-transform 0.4s ease 0s;
+    transition: -webkit-transform 0.4s ease 0s;
+    transition: transform 0.4s ease 0s;
+    transition: transform 0.4s ease 0s, -webkit-transform 0.4s ease 0s;
   }
 
   .card-slider__item-ibg span {
