@@ -4501,7 +4501,8 @@
                         slidesPerView: 1,
                         spaceBetween: 10,
                         direction: "horizontal",
-                        loop: false
+                        loop: false,
+                        freeMode: false
                     },
                     992: {
                         slidesPerView: 4,
