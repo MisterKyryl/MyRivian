@@ -8268,6 +8268,7 @@
         if (mainSlider) {
             mainSlider.addEventListener("click", updateBodyClass);
             mainSlider.addEventListener("touchend", updateBodyClass);
+            setInterval(updateBodyClass, 100);
         }
         function updateBodyClass() {
             const activeIndex = window.CI360.getActiveIndexByID("main-slider", "horizontal");
@@ -8370,30 +8371,35 @@
         });
     }
     loadYouTubeAPI(initializeYouTubePlayer);
-    window.onload = function() {
-        function checkElements(selector, buttonId) {
-            const box = document.querySelectorAll(selector);
-            const btn = document.getElementById(buttonId);
-            return box.length > 0 && btn !== null;
+    document.addEventListener("DOMContentLoaded", (function() {
+        const mainBody = document.querySelector(".main__body");
+        if (!mainBody) return;
+        function checkWatcherView() {
+            if (window.innerWidth <= 797.98) if (mainBody.querySelector("._watcher-view")) document.body.style.overflow = "hidden"; else document.body.style.overflow = ""; else document.body.style.overflow = "";
         }
-        function mainLogic(selector, buttonId) {
-            const box = document.querySelectorAll(selector);
-            const btn = document.getElementById(buttonId);
-            for (let i = 4; i < box.length; i++) box[i].style.display = "none";
-            let countD = 4;
-            btn.addEventListener("click", (function() {
-                const box = document.querySelectorAll(selector);
-                if (countD < box.length) {
-                    for (let i = countD; i < countD + 4 && i < box.length; i++) box[i].style.display = "block";
-                    countD += 4;
-                    if (countD >= box.length) btn.style.display = "none";
-                } else btn.style.display = "none";
-            }));
+        checkWatcherView();
+        const observer = new MutationObserver(checkWatcherView);
+        observer.observe(mainBody, {
+            childList: true,
+            subtree: true
+        });
+        window.addEventListener("resize", checkWatcherView);
+    }));
+    document.addEventListener("DOMContentLoaded", (function() {
+        const mainSliderID = "main-slider";
+        const mainSlider = document.getElementById(mainSliderID);
+        if (!mainSlider) return;
+        let firstRangeTriggered = false;
+        function checkActiveSlide() {
+            const activeIndex = window.CI360.getActiveIndexByID(mainSliderID, "horizontal");
+            if (activeIndex >= 1 && activeIndex <= 10) firstRangeTriggered = true;
+            if (firstRangeTriggered && activeIndex >= 42 && activeIndex <= 52) {
+                document.body.style.overflow = "";
+                firstRangeTriggered = false;
+            }
         }
-        if (checkElements(".card-product__block_01", "product-button-01")) mainLogic(".card-product__block_01", "product-button-01");
-        if (checkElements(".card-product__block_02", "product-button-02")) mainLogic(".card-product__block_02", "product-button-02");
-        if (checkElements(".card-product__block_03", "product-button-03")) mainLogic(".card-product__block_03", "product-button-03");
-    };
+        setInterval(checkActiveSlide, 100);
+    }));
     window["FLS"] = true;
     isWebp();
     formFieldsInit({
